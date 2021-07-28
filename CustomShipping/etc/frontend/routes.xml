@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <router id="standard">
+        <route id="Chintan_CustomShipping" frontName="CustomShipping">
+            <module name="Chintan_CustomShipping"/>
+        </route>
+    </router>
+</config>

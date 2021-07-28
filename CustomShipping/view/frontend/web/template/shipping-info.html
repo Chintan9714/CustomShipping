@@ -1,0 +1,39 @@
+<div class="free-shipping-info" id="custom_shipping_div" data-bind="visible: showFreeShippingInfo()" style="display: none;">
+    <form method="post" action="">
+        <table>
+            <tr>
+                <td>
+                    <label>Country:</label>
+                    <select name="selectedChoice"  id="selectedChoice" data-bind="options: choices, value: selectedChoice">
+                    </select>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <select name="response_state" id="response_state" onchange="(function(){ 
+
+                        var custom_state = document.getElementById('response_state').value;
+                        var custom_country = document.getElementById('selectedChoice').value;
+                        if(custom_state != '' && custom_country != '')
+                            {
+                                const xhttp = new XMLHttpRequest();
+                                xhttp.onload = function() 
+                                {
+        
+                                }
+                                xhttp.open('GET', ' /CustomShipping/checkout/saveInQuote?state='+ custom_state + '&country=' + custom_country);
+                                xhttp.send();
+                            }
+                            else
+                            {
+                                alert('not send');   
+                            }
+                         }) ()">
+                        <option>select a country</option>
+                    </select>    
+                </td>
+             </tr>
+        </table>
+    </form>
+</div>

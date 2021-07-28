@@ -1,0 +1,15 @@
+<section class="admin__page-section order-view-billing-shipping">
+    <div class="admin__page-section-title">
+        <span class="title">Shipping Additional Information for City and Country</span>
+    </div>
+    <div class="admin__page-section-content">
+        <div class="admin__page-section-item order-payment-method">
+            <div class="admin__page-section-item-content">
+                <div class="order-payment-method-title"><b>Country:</b> <?= /* @noEscape */
+                    $block->getCountry(); ?> </div>
+                <div class="order-payment-method-title"><b>State:</b> <?= /* @noEscape */
+                    $block->getStates(); ?> </div>
+            </div>
+        </div>
+    </div>
+</section>
